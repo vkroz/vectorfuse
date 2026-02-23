@@ -1,0 +1,43 @@
+{
+  "name": "vectorfuse",
+  "version": "0.1.0",
+  "description": "Unified API layer for vector database backends",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src/",
+    "clean": "rm -rf dist/"
+  },
+  "keywords": [
+    "vector",
+    "database",
+    "embeddings",
+    "milvus",
+    "zilliz",
+    "rag"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  },
+  "peerDependencies": {
+    "@zilliz/milvus2-sdk-node": ">=2.4.0"
+  },
+  "peerDependenciesMeta": {
+    "@zilliz/milvus2-sdk-node": {
+      "optional": true
+    }
+  },
+  "files": [
+    "dist/",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
